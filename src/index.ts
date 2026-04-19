@@ -54,7 +54,7 @@ export class FilterOperator<T> implements Operator<T, T> {
   constructor(private predicate: (item: T) => boolean) {}
   
   execute(input: T[]): T[] {
-    return input.filter(this.predicates);
+    return input.filter(this.predicate);
   }
 }
 
